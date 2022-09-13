@@ -1,0 +1,10 @@
+[Unit]
+Description=SSH jumper
+After=network.target
+
+[Service]
+Restart=on-failure
+ExecStart=/bin/bash /home/ubuntu/jump.sh
+
+[Install]
+WantedBy=multi-user.target
